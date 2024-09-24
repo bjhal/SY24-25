@@ -1,19 +1,29 @@
 ﻿Public Class Form1
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        follow(enemy, Avatar, 2)
-        follow(Enemy2, Avatar, 5)
-        follow(Enemy3, Avatar, 10)
+        follow(Enemy2, Avatar, 5, 5)
+        follow(Enemy3, Avatar, 7, 7)
+        pace(Enemy1, Platform, 5)
     End Sub
-    Sub follow(e As PictureBox, a As PictureBox, speed As Integer)
-        If e.Location.Y < a.Location.Y Then
-            move(e, 0, speed)
+    Sub pace(e As PictureBox, p As PictureBox, speed As Integer)
+        Dim dir As Integer
+        dir = e.Tag
+        If e.Location.X > p.Location.X Then
+            e.Location += New Point(-speed * dir, 0)
+            dir = -dir
         Else
-            move(e, 0, -speed)
+            e.Location += New Point(speed * dir, 0)
+        End If
+    End Sub
+    Sub follow(e As PictureBox, a As PictureBox, xspeed As Integer, yspeed As Integer)
+        If e.Location.Y < a.Location.Y Then
+            move(e, 0, yspeed)
+        Else
+            move(e, 0, -yspeed)
         End If
         If e.Location.X < a.Location.X Then
-            move(e, speed, 0)
+            move(e, xspeed, 0)
         Else
-            move(e, -speed, 0)
+            move(e, -xspeed, 0)
         End If
     End Sub
 

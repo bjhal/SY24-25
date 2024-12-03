@@ -73,6 +73,17 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property png_clipart_super_mario_brick_illustration_new_super_mario_bros_wii_new_super_mario_bros_wii_super_mario_world_brick_best_s_free_angle_brown() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("png-clipart-super-mario-brick-illustration-new-super-mario-bros-wii-new-super-mar"& _ 
+                        "io-bros-wii-super-mario-world-brick-best-s-free-angle-brown", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property the_super_mario_bros_movie___piranha_plant_png_by_lolthd_dfujppw_fullview() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("the_super_mario_bros_movie___piranha_plant_png_by_lolthd_dfujppw-fullview", resourceCulture)

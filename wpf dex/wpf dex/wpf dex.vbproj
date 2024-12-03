@@ -134,5 +134,17 @@
   <ItemGroup>
     <Resource Include="bigmac.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pokémon_Pikachu_art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="004.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
